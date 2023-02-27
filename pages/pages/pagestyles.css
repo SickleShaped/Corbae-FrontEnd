@@ -1,0 +1,7 @@
+.AtRight {
+  justify-content: left;
+  text-align: left;
+  margin-left: 0em;
+  max-width: 1280px;
+  padding: 5rem;
+}
