@@ -127,6 +127,76 @@ const ProductPage = (props) => {
 
   const [comments, setComments] = useState("");
 
+  const AddToCart = async (event) => {
+    let response = await axios
+      .post(
+        "https://localhost:7019/cart/AddProductToCart?productID=" +
+          params.id +
+          "&userID=" +
+          Cookies.get("userID"),
+        {},
+        {
+          headers: {
+            Authorization: "Bearer " + Cookies.get("jwt"),
+          },
+        }
+      )
+      .then(function (data) {
+        ///console.log(data.response),
+        success.setHasSuccess({
+          ...success.hasSuccess,
+          hasSuccess: "Товар успешно добавлен в корзину",
+        });
+        error.setHasError({ ...errors.hasError, hasError: "" });
+      })
+      .catch(function (error) {
+        error.setHasError({
+          ...error.hasError,
+          hasError: error.response.data.message,
+        });
+        // console.log(error);
+        success.setHasSuccess({
+          ...success.hasSuccess,
+          hasSuccess: "",
+        });
+      });
+  };
+
+  const AddToWish = async (event) => {
+    let response = await axios
+      .post(
+        "https://localhost:7019/wish/AddProductToCart?productID=" +
+          params.id +
+          "&userID=" +
+          Cookies.get("userID"),
+        {},
+        {
+          headers: {
+            Authorization: "Bearer " + Cookies.get("jwt"),
+          },
+        }
+      )
+      .then(function (data) {
+        ///console.log(data.response),
+        setHasSuccess({
+          ...hasSuccess,
+          hasSuccess: "Товар успешно добавлен в желаемое",
+        });
+        setHasError({ ...hasError, hasError: "" });
+      })
+      .catch(function (error) {
+        console.log(error),
+          setHasError({
+            ...hasError,
+            hasError: error.response.data.message,
+          });
+        setHasSuccess({
+          ...success,
+          hasSuccess: "",
+        });
+      });
+  };
+
   return (
     <div>
       <Hat />
@@ -170,11 +240,15 @@ const ProductPage = (props) => {
         </div>
 
         <div className="button1">
-          <CorbaeButton type="button">Добавить в корзину</CorbaeButton>
+          <CorbaeButton type="button" onClick={() => AddToCart()}>
+            Добавить в корзину
+          </CorbaeButton>
         </div>
 
         <div className="button2">
-          <CorbaeButton type="button">Добавить в желаемое</CorbaeButton>
+          <CorbaeButton type="button" onClick={() => AddToWish()}>
+            Добавить в желаемое
+          </CorbaeButton>
         </div>
       </div>
       <Formik
