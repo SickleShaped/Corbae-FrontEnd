@@ -1,39 +1,7 @@
 import axios from "axios";
+import Cookies from "js-cookie";
 
 export default class UserService {
-  /*
-  static async getAll(limit = 10, page = 1) {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts",
-      {
-        params: {
-          _limit: limit,
-          _page: page,
-        },
-      }
-    );
-
-    return response;
-  }*/
-
-  /*
-  static async getById(id) {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/posts/" + id
-    );
-
-    return response;
-  } */
-
-  /*
-  static async getCommentsById(id) {
-    const response = await axios.get(
-      `https://jsonplaceholder.typicode.com/posts/${id}/comments`
-    );
-
-    return response;
-  }*/
-
   static async GetAllUsers() {
     const response = await axios.get(
       "https://localhost:7019/api/user/GetAllUsers"
@@ -60,7 +28,8 @@ export default class UserService {
     company,
     adress,
     phoneNumber,
-    isSaller
+    isSaller,
+    IsCustomer
   ) {
     const response = await axios.post(
       "https://localhost:7019/api/user/CreateUser",
@@ -86,7 +55,8 @@ export default class UserService {
     company,
     adress,
     phoneNumber,
-    isSaller
+    isSaller,
+    IsCustomer
   ) {
     const response = await axios.put(
       "https://localhost:7019/api/user/EditUser",

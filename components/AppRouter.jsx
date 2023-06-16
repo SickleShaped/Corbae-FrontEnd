@@ -9,7 +9,6 @@ import {
 
 import About from "../pages/About";
 import Posts from "../pages/Posts";
-import NotFound from "../pages/NotFound";
 import PostPage from "../pages/PostPage";
 import Login from "../pages/startpage";
 import { useContext } from "react";

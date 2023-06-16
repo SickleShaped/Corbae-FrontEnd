@@ -1,7 +1,230 @@
 .AtRight {
+  justify-content: center;
+  justify-items: center;
+}
+
+.AtLeft {
+  margin-top: 2em;
   justify-content: left;
   text-align: left;
   margin-left: 0em;
-  max-width: 1280px;
-  padding: 5rem;
+  max-width: 1360px;
+}
+
+.AtCenter {
+  justify-content: center;
+  text-align: center;
+
+  align-items: center;
+  align-self: center;
+}
+
+.ErrorMessage {
+  justify-content: left;
+  font-family: inherit;
+  background-color: #a3244a;
+  color: #f1759a;
+  border-radius: 2em;
+  text-align: left;
+  margin-left: 2em;
+  max-width: 50%;
+}
+
+.SuccessMessage {
+  justify-content: left;
+  font-family: inherit;
+  background-color: #8fc1e0;
+  color: #3485b3;
+  border-radius: 2em;
+  text-align: left;
+  margin-left: 2em;
+  max-width: 50%;
+}
+
+.wrapper_login {
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.justify-left_login {
+  justify-content: left;
+  text-align: left;
+}
+
+.justify-right_login {
+  justify-content: right;
+  text-align: center;
+}
+
+.margin_login {
+  margin: 1em;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.registermargin_login {
+  margin-top: 5em;
+}
+
+.justify-left_register {
+  justify-content: left;
+  text-align: left;
+  margin-left: 2.5%;
+}
+
+.fieldset_register {
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-bottom: 2em;
+}
+
+.atCenter_register {
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.marginforerrors {
+  margin-left: 1em;
+}
+
+.marginnext {
+  margin-left: 2em;
+}
+
+.marginnext2 {
+  margin-right: 2em;
+}
+
+.userpage_wrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 2fr;
+  max-width: 2560px;
+}
+
+.userpage_wrapper2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 2fr;
+  max-width: 2560px;
+  grid-template-areas: "name field3 button10";
+}
+
+.atReallyRight {
+  margin-top: 2em;
+  justify-content: right;
+  text-align: right;
+}
+
+.button10 {
+  margin-top: 2em;
+  justify-content: center;
+  text-align: left;
+  margin-left: 3em;
+}
+
+.product_wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 2fr;
+  max-width: 2560px;
+}
+
+.search {
+  margin-right: 6%;
+  margin-left: 6%;
+}
+
+.wrapper_product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 4em 4em;
+  grid-template-areas:
+    "name name price quantity button1"
+    "desc desc desc category button2";
+}
+
+.name {
+  grid-template-areas: name;
+  justify-self: left;
+  align-self: center;
+  margin-left: 2em;
+}
+
+.price {
+  grid-area: price;
+  justify-self: left;
+  align-self: center;
+}
+
+.quantity {
+  grid-area: quantity;
+  justify-self: left;
+  align-self: center;
+}
+
+.desc {
+  grid-area: desc;
+  justify-self: left;
+  align-self: center;
+  margin-left: 2em;
+}
+
+.category {
+  grid-area: category;
+  justify-self: left;
+  align-self: center;
+}
+
+.button1 {
+  grid-area: button1;
+  justify-self: left;
+  align-self: center;
+}
+
+.button2 {
+  grid-area: button2;
+  justify-self: left;
+  align-self: center;
+}
+
+.wrapper_product_commentsss {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 5em;
+  grid-template-areas: "field field field field button5";
+}
+
+.field {
+  grid-area: field;
+  align-self: center;
+}
+
+.name2 {
+  margin-top: 2em;
+}
+
+.button5 {
+  grid-area: button5;
+  justify-self: left;
+  align-self: center;
+}
+
+.comment_wrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 1fr;
+  max-width: 2560px;
+}
+
+.wrapper_product2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 4em;
+  grid-template-areas: "name name price quantity quantity";
 }

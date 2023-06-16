@@ -1,0 +1,138 @@
+.product {
+  /*display: flex;*/
+  border: 2px solid rgb(51, 104, 98);
+  margin-top: 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  grid-template-rows: 200px repeat(4 1fr) auto;
+  max-width: 2560px;
+}
+
+.hat-back {
+  background-color: #7096ad;
+  width: 100%;
+}
+
+.h2-2 {
+  margin-left: 5%;
+  color: #f6f3f5;
+  font-size: 2em;
+  line-height: 1.1;
+  justify-self: left;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-rows: 5em 5em 5em;
+}
+
+.max {
+  margin: 2em;
+}
+
+.max2 {
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-left: 1em;
+}
+
+.wrapper3 {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 3em 3em 3em;
+  grid-template-areas:
+    "title title title title button1"
+    "price price button2 button2 button2"
+    "quantity quantity field button3 button3";
+}
+
+.wrapper4 {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 3em 3em 4em;
+  grid-template-areas:
+    "title title title button3"
+    "price quantity quantity quantity"
+    "button4 button4 button2 button2";
+}
+
+.title {
+  grid-area: title;
+  justify-self: left;
+  align-self: center;
+}
+
+.button1 {
+  grid-area: button1;
+  justify-self: right;
+  margin-right: 1em;
+}
+
+.button2 {
+  grid-area: button2;
+  justify-self: right;
+  margin-right: 1em;
+}
+
+.button3 {
+  grid-area: button3;
+  justify-self: right;
+  margin-right: 1em;
+}
+
+.button4 {
+  grid-area: button4;
+  justify-self: left;
+  margin-right: 1em;
+}
+
+.price {
+  grid-area: price;
+  justify-self: left;
+  align-self: center;
+}
+
+.quantity {
+  grid-area: quantity;
+  justify-self: left;
+  align-self: center;
+}
+
+.field {
+  grid-area: field;
+  margin-left: 1em;
+}
+
+.wrapper6 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "title title title title button2";
+}
+
+.wrapper33 {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+  grid-template-rows: 4em 4em;
+  grid-template-areas:
+    "price price title3 title3 title3"
+    "quantity2 quantity2 quantity2 button3 button3";
+}
+
+.quantity2 {
+  grid-area: quantity2;
+  justify-self: left;
+  align-self: center;
+}
+
+.title3 {
+  grid-area: title3;
+  justify-self: left;
+  align-self: center;
+}
