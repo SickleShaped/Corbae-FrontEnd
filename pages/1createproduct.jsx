@@ -117,43 +117,44 @@ const CreateProductPage = () => {
             <fieldset>
               <legend>Введите данные товара</legend>
 
+              {errors.name && touched.name && <div className="justify-left_register">{errors.name}</div>}
               <CorbaeField
                 placeholder="Название товара (обязательно)"
                 name="name"
               ></CorbaeField>
-              {errors.name && touched.name && <div>{errors.name}</div>}
-
+              
+              {errors.description && touched.description && (
+                <div className="justify-left_register">{errors.description}</div>
+              )}
               <CorbaeField
                 placeholder="Описание товара (обязательно)"
                 name="description"
               ></CorbaeField>
-              {errors.description && touched.description && (
-                <div>{errors.description}</div>
-              )}
-
+              
+              {errors.price && touched.price && <div className="justify-left_register">{errors.price}</div>}
               <CorbaeField
                 placeholder="Стоимость товара в рублях (обязательно)"
                 name="price"
                 type="number"
               ></CorbaeField>
-              {errors.price && touched.price && <div>{errors.price}</div>}
-
+              
+              {errors.quantityInStock && touched.quantityInStock && (
+                <div className="justify-left_register" >{errors.quantityInStock}</div>
+              )}
               <CorbaeField
                 placeholder="Количество товара на складе (обязательно)"
                 name="quantityInStock"
                 type="number"
               ></CorbaeField>
-              {errors.quantityInStock && touched.quantityInStock && (
-                <div>{errors.quantityInStock}</div>
+              
+              {errors.category && touched.category && (
+                <div className="justify-left_register" >{errors.category}</div>
               )}
-
               <CorbaeField
                 placeholder="Категория товара"
                 name="category"
               ></CorbaeField>
-              {errors.category && touched.category && (
-                <div>{errors.category}</div>
-              )}
+              
             </fieldset>
           </div>
           <CorbaeButton type="submit">Создать товар</CorbaeButton>

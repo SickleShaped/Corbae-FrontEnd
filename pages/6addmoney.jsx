@@ -81,12 +81,12 @@ const AddMoneyPage = () => {
           <Hat />
           {hasError.hasError != "" && (
             <div className="ErrorMessage">
-              <h3 id="errortext">{hasError.hasError}</h3>
+              <h3 className="marginforerrors" id="errortext">{hasError.hasError}</h3>
             </div>
           )}
           {hasSuccess.hasSuccess != "" && (
             <div className="SuccessMessage">
-              <h3 id="successtext">{hasSuccess.hasSuccess}</h3>
+              <h3 className="marginforerrors" id="successtext">{hasSuccess.hasSuccess}</h3>
             </div>
           )}
           <h2>Внести деньги</h2>

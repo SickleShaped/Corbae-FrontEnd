@@ -24,7 +24,7 @@ const CartProduct = (props) => {
   const DeleteFromCart = async (event) => {
     let response = await axios
       .delete(
-        "https://localhost:7019/wish/RemoveProductFromCart?wishProductID=" +
+        "https://localhost:7019/cart/RemoveProductFromCart?wishProductID=" +
           props.product.wishProductID +
           "&userID=" +
           Cookies.get("userID"),
